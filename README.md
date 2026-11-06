@@ -15,6 +15,18 @@ Materiały do konkursu **Alfik Matematyczny** (Łowcy Talentów – Jersz), kate
 
 Wszystkie zadania pochodzą z oryginalnych arkuszy 2021–2025, a klucze z oficjalnych kluczy. Format arkusza 234-LIC: 28 zadań, w każdym 4 stwierdzenia A–D oceniane osobno jako prawda/fałsz, start 112 pkt, +1 / −1 / 0, 90 minut, bez kalkulatora.
 
+## Arkusze i klucze (źródło)
+
+Oryginalne arkusze kategorii klasy 2–4 LO i oficjalne klucze, na których oparta jest cała analiza:
+
+| Rok | Arkusz | Klucz |
+|---|---|---|
+| 2021 | [arkusz-2021.pdf](arkusze/2021/arkusz-2021.pdf) | [klucz-2021.xls](arkusze/2021/klucz-2021.xls) |
+| 2022 | [arkusz-2022.pdf](arkusze/2022/arkusz-2022.pdf) | [klucz-2022.pdf](arkusze/2022/klucz-2022.pdf) |
+| 2023 | [arkusz-2023.pdf](arkusze/2023/arkusz-2023.pdf) | [klucz-2023.pdf](arkusze/2023/klucz-2023.pdf) |
+| 2024 | [arkusz-2024.pdf](arkusze/2024/arkusz-2024.pdf) | [klucz-2024.pdf](arkusze/2024/klucz-2024.pdf) |
+| 2025 | [arkusz-2025.pdf](arkusze/2025/arkusz-2025.pdf) | [klucz-2025.pdf](arkusze/2025/klucz-2025.pdf) |
+
 ## Uruchomienie lokalnie
 
 To statyczne pliki HTML – wystarczy otworzyć `index.html` w przeglądarce. Wzory renderuje KaTeX ładowany z CDN (jsDelivr), więc potrzebny jest internet.
