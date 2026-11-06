@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centrum dowodzenia – Alfik Matematyczny 2026 (kl. 2–4 LO)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<style>
+:root{--ink:#1c1c1c;--muted:#6a6a6a;--bg:#fbfaf7;--card:#fff;--line:#dedbd2;--accent:#1f4fa3;
+--blue:#1f4fa3;--blue-bg:#f1f5fb;--green:#2d6a43;--green-bg:#f1f7f3;--red:#a8322d;--red-bg:#fbf2f1;
+--violet:#5b3f8f;--violet-bg:#f5f2fa;--amber:#7a6320;--amber-bg:#f8f5ea;--soft:#f0eee7}
+@media (prefers-color-scheme:dark){:root{--ink:#e8e6e1;--muted:#a09d95;--bg:#17171a;--card:#1e1e22;--line:#34343a;--accent:#8fb2f0;
+--blue:#8fb2f0;--blue-bg:#1c2230;--green:#8fcba5;--green-bg:#1b2620;--red:#ef9a94;--red-bg:#2a1d1d;
+--violet:#bfa6ea;--violet-bg:#241f2e;--amber:#d9c27a;--amber-bg:#26231a;--soft:#26262b}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16.5px}
+nav.top{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.1rem 1.1rem;align-items:center;padding:.55rem 1.1rem}
+nav.top .brand{font-weight:700;margin-right:.6rem;color:var(--ink)}
+nav.top a{color:var(--muted);text-decoration:none;padding:.25rem 0;font-size:.93rem;border-bottom:2px solid transparent}
+nav.top a:hover{color:var(--ink)}
+nav.top a.active{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+nav.top .sp{flex:1}
+button.printbtn{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:.3rem .7rem;font:inherit;font-size:.86rem;cursor:pointer}
+button.printbtn:hover{border-color:var(--ink)}
+button.printbtn.main{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+main{max-width:860px;margin:0 auto;padding:1.6rem 1.1rem 4rem}
+header.hero{margin:.4rem 0 1.4rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+header.hero h1{margin:.1rem 0 .5rem;font-size:1.9rem;line-height:1.2;font-weight:700;letter-spacing:-.01em}
+header.hero p{margin:.25rem 0;color:var(--muted)}
+h2{font-size:1.4rem;margin:2.6rem 0 .8rem;font-weight:700;letter-spacing:-.005em}
+h3{font-size:1.08rem;margin:1.6rem 0 .4rem;font-weight:700;color:var(--ink)}
+h4{margin:1rem 0 .3rem}
+a{color:var(--accent)}
+.toc{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;margin:1.1rem 0}
+.toc ol,.toc ul{margin:.3rem 0;padding-left:1.3rem}
+.toc li{margin:.12rem 0}
+.box{border-left:3px solid;padding:.55rem 1rem .6rem 1rem;margin:1.1rem 0;page-break-inside:avoid;break-inside:avoid}
+.box > .lbl{display:block;font-size:.75rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:.15rem}
+.box p{margin:.35rem 0}.box ul,.box ol{margin:.35rem 0;padding-left:1.25rem}
+.schemat{border-color:var(--blue);background:var(--blue-bg)}.schemat>.lbl{color:var(--blue)}
+.trik{border-color:var(--green);background:var(--green-bg)}.trik>.lbl{color:var(--green)}
+.pulapka{border-color:var(--red);background:var(--red-bg)}.pulapka>.lbl{color:var(--red)}
+.w2026{border-color:var(--violet);background:var(--violet-bg)}.w2026>.lbl{color:var(--violet)}
+.info{border-color:var(--amber);background:var(--amber-bg)}.info>.lbl{color:var(--amber)}
+table{border-collapse:collapse;width:100%;margin:.8rem 0;font-size:.94rem;page-break-inside:avoid;break-inside:avoid}
+th,td{border-bottom:1px solid var(--line);padding:.4rem .55rem;text-align:left;vertical-align:top}
+th{border-bottom:2px solid var(--ink);font-weight:700;font-size:.88rem}
+td.c,th.c{text-align:center}
+.task{border-top:1px solid var(--line);padding:1rem 0 .7rem;margin:0;page-break-inside:avoid;break-inside:avoid}
+.task .meta{font-size:.82rem;color:var(--muted);margin-bottom:.3rem}
+.task .meta .pill{margin-left:.6rem;font-family:ui-monospace,Consolas,monospace;font-size:.78rem;border:1px solid var(--line);border-radius:3px;padding:0 .35rem}
+.task .q{margin:.2rem 0 .5rem}
+.opts{list-style:none;padding:0;margin:.2rem 0 .4rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.15rem 1.5rem}
+.opts li{padding:.12rem 0}
+.opts li b{color:var(--muted);margin-right:.3rem;font-weight:600}
+details{margin-top:.5rem}
+summary{cursor:pointer;color:var(--accent);font-size:.92rem}
+summary:hover{text-decoration:underline}
+details[open]>summary{margin-bottom:.3rem}
+.keyline{display:flex;gap:.3rem .8rem;flex-wrap:wrap;margin:.4rem 0;font-family:ui-monospace,Consolas,monospace;font-size:.88rem}
+.k{display:inline-block;font-weight:700}
+.k.T{color:var(--green)}.k.N{color:var(--red)}.k.X{color:var(--muted);font-weight:400}
+.sol{margin:.35rem 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.small{font-size:.9rem;color:var(--muted)}
+.badge{display:inline-block;background:var(--soft);border-radius:3px;padding:0 .4rem;font-size:.82rem;font-weight:600}
+.day{border-top:1px solid var(--line);padding:.7rem 0;margin:0;page-break-inside:avoid;break-inside:avoid}
+.day h4{margin:.1rem 0 .3rem}
+.day .d{color:var(--accent)}
+code{background:var(--soft);border-radius:3px;padding:0 .3rem;font-size:.92em}
+footer{color:var(--muted);font-size:.85rem;margin-top:3.5rem;padding-top:1rem;border-top:1px solid var(--line)}
+@media (max-width:700px){.opts{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}body{font-size:15.5px}header.hero h1{font-size:1.5rem}nav.top{position:static;gap:.1rem .9rem}nav.top .brand{width:100%}nav.top .sp{display:none}}
+@media print{
+  @page{size:A4;margin:14mm 12mm}
+  :root{--ink:#000;--muted:#444;--bg:#fff;--card:#fff;--line:#bbb;--accent:#000;--blue:#000;--green:#000;--red:#000;--violet:#000;--amber:#000;--blue-bg:#fff;--green-bg:#fff;--red-bg:#fff;--violet-bg:#fff;--amber-bg:#fff;--soft:#eee}
+  .no-print,nav.top{display:none!important}
+  body{background:#fff;color:#000;font-size:11.5pt}
+  main{max-width:none;padding:0}
+  .task,.box,.day,table,tr,details{page-break-inside:avoid;break-inside:avoid}
+  h2,h3{page-break-after:avoid;break-after:avoid}
+  a{color:#000;text-decoration:none}
+}
+</style>
+<script>
+function expandAndPrint(){document.querySelectorAll('details').forEach(function(d){d.open=true;});setTimeout(function(){window.print();},350);}
+window.addEventListener('beforeprint',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});
+function toggleAll(open){document.querySelectorAll('details').forEach(function(d){d.open=open;});}
+</script>
+</head>
+<body>
+<nav class="top"><span class="brand">ALFIK 2026 · 234-LIC</span><a href="index.html" class="active">Centrum dowodzenia</a><a href="1_teoria_liczb_i_algebra.html" class="">1. Teoria liczb i algebra</a><a href="2_geometria_i_kombinatoryka.html" class="">2. Geometria i kombinatoryka</a><a href="3_symulator_2026_i_zadania.html" class="">3. Symulator 2026</a><span class="sp"></span>
+<button class="printbtn no-print" onclick="toggleAll(false)">Zwiń wszystko</button>
+<button class="printbtn main no-print" onclick="expandAndPrint()">Rozwiń wszystko i zapisz jako PDF / Drukuj</button></nav>
+<main>
+
+<header class="hero">
+<h1>Alfik Matematyczny 2026 – centrum dowodzenia (kl. 2–4 LO / technikum)</h1>
+<p><b>Konkurs: czwartek 19.11.2026.</b> Plan liczony od piątku 06.11.2026 – 13 dni treningu.</p>
+<p>Baza zbudowana na 5 oryginalnych arkuszach 2021–2025 i oficjalnych kluczach: 140 zadań, 556 decyzji T/N (jedno zadanie z 2025 anulowane).</p>
+</header>
+
+<div class="toc"><b>Moduły:</b>
+<ol>
+<li><a href="index.html">Centrum dowodzenia</a> – format, analiza 2021–2025, haki testowe, strategia 90 min, plan 13-dniowy (ta strona)</li>
+<li><a href="1_teoria_liczb_i_algebra.html">Teoria liczb, algebra i ciągi</a> – schematy + wszystkie zadania TL/AL z lat 2021–2025 z kluczem</li>
+<li><a href="2_geometria_i_kombinatoryka.html">Planimetria, stereometria, kombinatoryka, logika</a> – schematy + wszystkie zadania G/S/K z kluczem</li>
+<li><a href="3_symulator_2026_i_zadania.html">Symulator 2026</a> – 30 zadań z arkuszy 2021–2025 (15 najtrudniejszych + 15 kolejnych) w trybie egzaminacyjnym</li>
+</ol>
+<b>Na tej stronie:</b> <a href="#format">1. Format</a> · <a href="#anatomia">2. Anatomia arkusza</a> · <a href="#motywy">3. Motywy powtarzalne</a> · <a href="#klucz">4. Statystyka klucza</a> · <a href="#haki">5. Haki testowe</a> · <a href="#strategia">6. Strategia 90 min</a> · <a href="#plan">7. Plan 13 dni</a>
+</div>
+
+<h2 id="format">1. Prawdziwy format arkusza 234-LIC (sprawdzony na 5 rocznikach)</h2>
+<div class="box info"><span class="lbl">Najważniejsze odkrycie analizy</span><p>W klasach 2–4 szkoły ponadpodstawowej Alfik <b>nie jest</b> testem „30 zadań, jedna z A–E”. Każdy z 5 arkuszy 2021–2025 wygląda tak samo:</p><ul><li><b>28 zadań</b>, w każdym 4 odpowiedzi A, B, C, D;</li><li><b>każdą</b> odpowiedź oceniasz osobno: prawdziwa / fałszywa (może być 0–4 prawdziwych);</li><li><b>112 decyzji</b>, startujesz ze <b>112 pkt</b>; trafna decyzja $+1$, błędna $-1$, brak decyzji $0$ (zachowujesz punkt); maksimum $224$;</li><li>90 minut, bez kalkulatora. Klucz ma postać ciągów typu <code>TNTT</code>.</li></ul><p>Format „30 zadań A–E, +4/−1” dotyczy szkół podstawowych – nie Twojej kategorii.</p></div>
+<div class="box schemat"><span class="lbl">Schemat Alfika</span><p><b>Rachunek strzału w tym formacie:</b> jeśli jesteś pewny stwierdzenia z prawdopodobieństwem $p$, to wartość oczekiwana decyzji to $p\cdot(+1)+(1-p)\cdot(-1)=2p-1$.</p><ul><li>$p\gt 0{{,}}5$ ⇒ zaznaczaj (zysk),</li><li>$p=0{{,}}5$ ⇒ obojętne,</li><li>$p\lt 0{{,}}5$ ⇒ zaznacz <i>przeciwną</i> odpowiedź.</li></ul><p>Pusta odpowiedź ma sens tylko przy prawdziwym 50/50.</p></div>
+
+<h2 id="anatomia">2. Anatomia arkusza: co stoi w zadaniach 1–10, 11–20, 21–28</h2>
+<p>Liczba zadań z danej dziedziny w każdym bloku (suma po 5 latach; blok 21–28 ma 8 zadań na rok, więc łącznie 40):</p>
+<table><tr><th>Dziedzina</th><th class=c>Zad. 1–10</th><th class=c>Zad. 11–20</th><th class=c>Zad. 21–28</th></tr><tr><td>Teoria liczb</td><td class=c>18</td><td class=c>15</td><td class=c>7</td></tr><tr><td>Algebra / logika</td><td class=c>17</td><td class=c>12</td><td class=c>6</td></tr><tr><td>Planimetria</td><td class=c>8</td><td class=c>14</td><td class=c>16</td></tr><tr><td>Stereometria</td><td class=c>2</td><td class=c>7</td><td class=c>6</td></tr><tr><td>Kombinatoryka / logika</td><td class=c>5</td><td class=c>2</td><td class=c>5</td></tr></table>
+<h3>Blok 1–10 – „rozgrzewka faktów”</h3>
+<p>Krótkie pytania na znajomość jednego faktu lub sprawdzenie 4 małych przypadków. Typowo: Reszty z dzielenia, ostatnie cyfry, potęgi mod m (2021 / 1, 2021 / 9, 2024 / 1, 2024 / 7); Dzielniki: $d(n)$, $p^2$, iloczyn dzielników (2022 / 4, 2023 / 4, 2023 / 8, 2023 / 9); Liczby pierwsze i cyfry (2021 / 4, 2023 / 1, 2024 / 6, 2025 / 8); Działania $*$ / $\#$ (2022 / 9, 2023 / 3, 2025 / 9); Liczby niewymierne, ułamki okresowe (2021 / 2, 2022 / 7, 2023 / 5); Przedziały, warunki, logika zdań (2021 / 5, 2022 / 8, 2023 / 7, 2024 / 9).</p>
+<div class="box trik"><span class="lbl">Szybki Trik</span>Tu każde stwierdzenie rozstrzygasz w 10–30 s: wypisz małe przypadki (kwadraty $1..10$, liczby pierwsze, reszty). Cel: 40 decyzji w ≤ 20 min.</div>
+<h3>Blok 11–20 – „jedna obserwacja”</h3>
+<p>Potrzebny jeden pomysł: niezmiennik, podobieństwo, parzystość, wzór na liczbę przekątnych. Typowo: Kąty i przekątne wielokątów (2021 / 13, 2023 / 17, 2023 / 18, 2024 / 12); Wielościany: Euler, bipiramidy, przekroje sześcianu (2022 / 11, 2022 / 18, 2023 / 20, 2024 / 19); Bryły obrotowe, podobieństwo brył (2021 / 18, 2023 / 14, 2024 / 17); Dzielniki: $d(n)$, $p^2$, iloczyn dzielników (2025 / 12); Równania w liczbach całkowitych, potęgi, sumy kwadratów/sześcianów (2021 / 20, 2023 / 11, 2024 / 13, 2025 / 18); Wartość bezwzględna z parametrem (2023 / 19, 2024 / 14); Geometria analityczna (2021 / 17, 2023 / 13, 2024 / 18); Kolorowanie wierzchołków (dwudzielność) (2022 / 16).</p>
+<h3>Blok 21–28 – „konstrukcja albo kontrprzykład”</h3>
+<p>Zadania „ile może być / czy istnieje” wymagające przykładu albo dowodu niemożliwości; więcej stereometrii, kalendarza i parametrów. Typowo: Wielościany: Euler, bipiramidy, przekroje sześcianu (2021 / 24, 2023 / 26, 2025 / 22, 2025 / 25); Okręgi: styczność, łuki, kąty wpisane (2021 / 21, 2022 / 28, 2024 / 24, 2024 / 27); Trójkąty: zakres boku, podział pola (2021 / 28, 2022 / 22, 2024 / 21, 2025 / 21); Kalendarz (2022 / 21, 2023 / 22, 2024 / 25); Gry i niezmienniki (2021 / 27, 2024 / 26); Wartość bezwzględna z parametrem (2022 / 26, 2024 / 28); Dzielniki: $d(n)$, $p^2$, iloczyn dzielników (2021 / 26, 2023 / 27); Liczby pierwsze i cyfry (2025 / 24).</p>
+<div class="box pulapka"><span class="lbl">Pułapka</span>Trudność w Alfiku <b>nie rośnie mocno</b> z numerem zadania. Zadanie 27 bywa łatwiejsze od 13. Nie zostawiaj końcówki „na potem” – przejrzyj cały arkusz w fazie 1.</div>
+
+<h2 id="motywy">3. Motywy powtarzalne 2021–2025 (numery zadań w danym roku)</h2>
+<p>Każde z 140 zadań przypisane do jednego schematu. Link prowadzi do sekcji kompendium z teorią i wszystkimi zadaniami tego typu.</p>
+<table><tr><th>Schemat</th><th class=c>2021</th><th class=c>2022</th><th class=c>2023</th><th class=c>2024</th><th class=c>2025</th><th class=c>Lata</th></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#G1'>G1</a> – Kąty i przekątne wielokątów <span class="badge">≥3 lata</span></td><td class=c>6, 10, 13, 23</td><td class=c>10</td><td class=c>10, 17, 18</td><td class=c>12, 16</td><td class=c>13, 26</td><td class=c><b>5/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#TL3'>TL3</a> – Liczby pierwsze i cyfry <span class="badge">≥3 lata</span></td><td class=c>4, 12, 19</td><td class=c>15, 17</td><td class=c>1, 12</td><td class=c>6</td><td class=c>8, 16, 24</td><td class=c><b>5/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#TL4'>TL4</a> – Równania w liczbach całkowitych, potęgi, sumy kwadratów/sześcianów <span class="badge">≥3 lata</span></td><td class=c>20</td><td class=c>6, 24, 27</td><td class=c>6, 11</td><td class=c>2, 13, 22</td><td class=c>18, 19</td><td class=c><b>5/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#S2'>S2</a> – Wielościany: Euler, bipiramidy, przekroje sześcianu <span class="badge">≥3 lata</span></td><td class=c>24</td><td class=c>11, 18</td><td class=c>20, 26</td><td class=c>8, 19</td><td class=c>22, 25, 28</td><td class=c><b>5/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#TL1'>TL1</a> – Reszty z dzielenia, ostatnie cyfry, potęgi mod m <span class="badge">≥3 lata</span></td><td class=c>1, 9</td><td class=c>12</td><td class=c>15</td><td class=c>1, 7, 20</td><td class=c>5, 23</td><td class=c><b>5/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#TL2'>TL2</a> – Dzielniki: $d(n)$, $p^2$, iloczyn dzielników <span class="badge">≥3 lata</span></td><td class=c>26</td><td class=c>4</td><td class=c>4, 8, 9, 27</td><td class=c>10</td><td class=c>10, 12</td><td class=c><b>5/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#AL4'>AL4</a> – Liczby niewymierne, ułamki okresowe <span class="badge">≥3 lata</span></td><td class=c>2, 14</td><td class=c>7</td><td class=c>5</td><td class=c>15</td><td class=c>11, 15</td><td class=c><b>5/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#AL1'>AL1</a> – Działania $*$ / $\#$ <span class="badge">≥3 lata</span></td><td class=c>16</td><td class=c>9</td><td class=c>3</td><td class=c>23</td><td class=c>9</td><td class=c><b>5/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#G3'>G3</a> – Okręgi: styczność, łuki, kąty wpisane <span class="badge">≥3 lata</span></td><td class=c>3, 21</td><td class=c>20, 28</td><td class=c>–</td><td class=c>24, 27</td><td class=c>7</td><td class=c><b>4/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#AL3'>AL3</a> – Przedziały, warunki, logika zdań <span class="badge">≥3 lata</span></td><td class=c>5, 11</td><td class=c>8</td><td class=c>7</td><td class=c>9, 11</td><td class=c>–</td><td class=c><b>4/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#G4'>G4</a> – Trójkąty: zakres boku, podział pola <span class="badge">≥3 lata</span></td><td class=c>8, 28</td><td class=c>22</td><td class=c>–</td><td class=c>21</td><td class=c>21, 27</td><td class=c><b>4/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#G5'>G5</a> – Czworokąty i rozcięcia <span class="badge">≥3 lata</span></td><td class=c>25</td><td class=c>25</td><td class=c>16, 23, 28</td><td class=c>–</td><td class=c>20</td><td class=c><b>4/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#AL2'>AL2</a> – Wartość bezwzględna z parametrem <span class="badge">≥3 lata</span></td><td class=c>–</td><td class=c>26</td><td class=c>19</td><td class=c>14, 28</td><td class=c>2, 6</td><td class=c><b>4/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#S1'>S1</a> – Bryły obrotowe, podobieństwo brył <span class="badge">≥3 lata</span></td><td class=c>18, 22</td><td class=c>5</td><td class=c>14</td><td class=c>17</td><td class=c>–</td><td class=c><b>4/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#K1'>K1</a> – Kolorowanie wierzchołków (dwudzielność) <span class="badge">≥3 lata</span></td><td class=c>–</td><td class=c>16</td><td class=c>2</td><td class=c>3</td><td class=c>1</td><td class=c><b>4/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#K3'>K3</a> – Kalendarz <span class="badge">≥3 lata</span></td><td class=c>–</td><td class=c>21</td><td class=c>22</td><td class=c>25</td><td class=c>17</td><td class=c><b>4/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#G6'>G6</a> – Geometria analityczna <span class="badge">≥3 lata</span></td><td class=c>17</td><td class=c>–</td><td class=c>13, 25</td><td class=c>18</td><td class=c>–</td><td class=c><b>3/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#AL5'>AL5</a> – Funkcja kwadratowa, wielomiany, ekstrema <span class="badge">≥3 lata</span></td><td class=c>–</td><td class=c>2, 14</td><td class=c>24</td><td class=c>–</td><td class=c>14</td><td class=c><b>3/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#G2'>G2</a> – Osie i środek symetrii <span class="badge">≥3 lata</span></td><td class=c>15</td><td class=c>13</td><td class=c>–</td><td class=c>–</td><td class=c>3</td><td class=c><b>3/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#AL7'>AL7</a> – Prędkość, zegar, jednostki <span class="badge">≥3 lata</span></td><td class=c>–</td><td class=c>19</td><td class=c>21</td><td class=c>–</td><td class=c>4</td><td class=c><b>3/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#AL6'>AL6</a> – Ciągi rekurencyjne</td><td class=c>7</td><td class=c>1</td><td class=c>–</td><td class=c>–</td><td class=c>–</td><td class=c><b>2/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#K2'>K2</a> – Gry i niezmienniki</td><td class=c>27</td><td class=c>–</td><td class=c>–</td><td class=c>26</td><td class=c>–</td><td class=c><b>2/5</b></td></tr><tr><td><a href='2_geometria_i_kombinatoryka.html#K4'>K4</a> – Zliczanie układów cyfr</td><td class=c>–</td><td class=c>3</td><td class=c>–</td><td class=c>5</td><td class=c>–</td><td class=c><b>2/5</b></td></tr><tr><td><a href='1_teoria_liczb_i_algebra.html#AL8'>AL8</a> – Znaki $\pm$ w sumie $1..9$</td><td class=c>–</td><td class=c>23</td><td class=c>–</td><td class=c>4</td><td class=c>–</td><td class=c><b>2/5</b></td></tr></table>
+<div class="box schemat"><span class="lbl">Schemat Alfika</span><p><b>Motywy, które pojawiły się w każdym z 5 lat</b> (praktycznie pewne 19.11):</p><ul><li>reszty kwadratów / ostatnie cyfry (mod 3, 4, 5, 7, 8),</li><li>liczba dzielników ($p^2$ ma 3 dzielniki, kwadrat ma nieparzystą liczbę dzielników),</li><li>własne działanie $a*b$ – od 2023 zawsze $ab+a+b=(a+1)(b+1)-1$,</li><li>przedziały / „spełnia dokładnie 3 z 4 warunków”,</li><li>liczby pierwsze w krótkich ciągach kolejnych liczb,</li><li>wielokąty foremne: kąt $180^\circ-\frac{{360^\circ}}n$, przekątne $\frac{{n(n-3)}}2$,</li><li>stereometria: sześcian (przekroje, środki krawędzi/ścian), bipiramidy, bryły obrotowe.</li></ul><p><b>Co najmniej 3 razy:</b> $|x|+|x-a|=p$ (2022, 2023, 2024), kalendarz (4/5), kolorowanie wierzchołków (4/5), liczby niewymierne (5/5), zakres trzeciego boku trójkąta ostro-/rozwartokątnego (2022, 2024, 2025), okręgi i łuki (5/5), geometria analityczna (2021, 2023, 2024).</p><p><b>Powtórki niemal dosłowne:</b> Pell $x^2-2y^2=\pm1$ (2022/6, 2024/2), Varignon (2021/25, 2023/16), obrót trójkąta 3-4-5 (2021/18, 2022/5), $|x|+|x-2|=p$ (2022/26, 2024/28), kolorowanie graniastosłupa (2022/16, 2025/1), środki krawędzi czworościanu/ścian sześcianu (2022/11, 2025/28), cięcie stożka/ostrosłupa w połowie wysokości (2021/22, 2023/14).</p></div>
+
+<h2 id="klucz">4. Statystyka klucza 2021–2025</h2>
+<div class="grid2"><div>
+<table><tr><th>Rok</th><th class=c>T / decyzji</th><th class=c>% T</th><th class=c>TTTT</th><th class=c>NNNN</th></tr><tr><td>2021</td><td class=c>73/112</td><td class=c>65%</td><td class=c>3</td><td class=c>0</td></tr><tr><td>2022</td><td class=c>72/112</td><td class=c>64%</td><td class=c>7</td><td class=c>0</td></tr><tr><td>2023</td><td class=c>65/112</td><td class=c>58%</td><td class=c>4</td><td class=c>1</td></tr><tr><td>2024</td><td class=c>62/112</td><td class=c>55%</td><td class=c>0</td><td class=c>0</td></tr><tr><td>2025</td><td class=c>64/108</td><td class=c>59%</td><td class=c>6</td><td class=c>0</td></tr>
+<tr><th>Razem</th><th class=c>336/556</th><th class=c>60.4%</th><th class=c>20</th><th class=c>1</th></tr></table>
+</div><div>
+<table><tr><th>Liczba T w zadaniu</th><th class=c>Zadań</th></tr><tr><td class=c>0</td><td class=c>1</td></tr><tr><td class=c>1</td><td class=c>24</td></tr><tr><td class=c>2</td><td class=c>50</td></tr><tr><td class=c>3</td><td class=c>44</td></tr><tr><td class=c>4</td><td class=c>20</td></tr></table>
+</div></div>
+<div class="box trik"><span class="lbl">Szybki Trik</span><ul><li><b>Bazowa częstość prawdy: 60,4%.</b> Gdy nie masz żadnej wiedzy o stwierdzeniu, „T” ma historycznie wartość oczekiwaną ok. $+0{{,}}2$ pkt. To jest ostatnia deska ratunku, nie metoda – ale lepsza niż puste pole.</li><li><b>Prawie każde zadanie ma co najmniej jedno T</b> (138 z 139; jedyny wyjątek NNNN to 2023/20). Jeśli trzy odpowiedzi to pewne N, czwarta była T w <b>86%</b> przypadków.</li><li>Gdy trzy odpowiedzi to pewne T, czwarta była T w <b>65%</b> przypadków.</li><li>Najczęstszy układ: 2 lub 3 prawdziwe (94 z 139 zadań). Wynik 0 lub 4 prawdziwych – podejrzany, sprawdź jeszcze raz.</li></ul></div>
+<div class="box pulapka"><span class="lbl">Pułapka</span>Statystyka nie zastępuje matematyki – organizator może zmienić proporcje (2024 miał tylko 55% T i ani jednego TTTT). Używaj jej tylko w fazie 3, przy stwierdzeniach, których nie da się rozstrzygnąć.</div>
+
+<h2 id="haki">5. Haki testowe pod format „4 × prawda/fałsz”</h2>
+<div class="box schemat"><span class="lbl">Schemat Alfika</span><p><b>Rozbij zadanie na 4 niezależne pytania.</b> Każda opcja to osobne zdanie „czy istnieje…/czy zawsze…”. Dwa typy dowodu:</p><ul><li><b>T przez przykład</b> – dla „istnieje / może być” wystarczy jeden przykład (np. $123\to23$; $2^5-5^2=7$).</li><li><b>N przez niezmiennik</b> – parzystość, reszta mod 3/4/8/9, ostatnia cyfra, wymiar, znak, nierówność trójkąta.</li></ul></div>
+<h3>5.1. Przypadki szczególne i zdegenerowane</h3>
+<ul>
+<li><b>Trójkąt</b> „dowolny” → sprawdź równoboczny, prostokątny równoramienny, 3-4-5; „ostrokątny nierównoramienny” → 4-5-6.</li>
+<li><b>Czworokąt</b> → kwadrat, prostokąt, romb, deltoid; dla Varignona patrz tylko na przekątne (prostopadłe? równe?).</li>
+<li><b>Liczby</b> → $n=1,2,3$; $x=0,\pm1,\pm2,\frac12$; $a=b$; liczba $p=2$ (jedyna parzysta pierwsza – 2024/6 rozstrzyga 3 opcje naraz!).</li>
+<li><b>Parametr</b> → podstaw wartości z opcji wprost (opcje to zwykle 4 kolejne kandydaty).</li>
+</ul>
+<h3>5.2. Ostatnia cyfra, parzystość, reszty</h3>
+<ul>
+<li>Kwadrat kończy się na $0,1,4,5,6,9$; kwadraty mod 3, 4: $\{0,1\}$; mod 5: $\{0,1,4\}$; mod 7: $\{0,1,2,4\}$; mod 8: $\{0,1,4\}$ (nieparzysty: zawsze 1).</li>
+<li>Zmiana znaków w $1\pm2\pm\dots\pm9$ nie zmienia parzystości (2022/23, 2024/4).</li>
+<li>Ruchy „podwój / odejmij 3” zachowują resztę mod 3 do zera (2021/27).</li>
+</ul>
+<h3>5.3. Wymiar i skala</h3>
+<ul><li>Skala $k$: długości $\times k$, pola $\times k^2$, objętości $\times k^3$. Cięcie w połowie wysokości ⇒ $\frac18$ ⇒ $1:7$ (2021/22, 2023/14).</li>
+<li>Obrót trójkąta wokół przeciwprostokątnej daje najmniejszą objętość (2021/18).</li></ul>
+<h3>5.4. Szacowanie z góry i z dołu</h3>
+<ul><li>$\frac{144}{25}\cdot\frac53\approx9{,}6<10$; $\sqrt{28}\approx5{,}3$; $60\text{ km/h}=16{,}7\text{ m/s}$.</li>
+<li>Liczba cyfr: $2^{10}=1024>10^3$; $3^5=243$, $2^7=128$, $2^8=256$.</li></ul>
+<h3>5.5. Spójność czterech odpowiedzi</h3>
+<ul><li>Opcje rosnące (parametr $p=1,2,3,4$) przy warunku monotonicznym dają <b>blok</b> prawd: <code>NNTT</code>, <code>NTTT</code> – nigdy <code>TNTN</code>. Sprawdź na końcu.</li>
+<li>Opcje „dokładnie 1 / 2 / 3 / 4” – zwykle obowiązuje górne ograniczenie (np. max 2 liczby pierwsze), więc prawdy tworzą blok od dołu.</li></ul>
+
+<h2 id="strategia">6. Strategia rozgrywki na 90 minut (112 decyzji)</h2>
+<table>
+<tr><th>Faza</th><th>Czas</th><th>Co robisz</th></tr>
+<tr><td><b>1. Przebieg po pewniaki</b></td><td>0–35 min</td><td>Zadania 1→28 po kolei, <b>bez pomijania końcówki</b>. Każde stwierdzenie: T / N / „?”. Zaznaczasz na karcie od razu tylko pewne. Cel: 65–80 pewnych decyzji. Limit: 90 s na zadanie – po nim zostaw „?” i idź dalej.</td></tr>
+<tr><td><b>2. Praca głęboka</b></td><td>35–75 min</td><td>Wracasz do „?”: najpierw te, gdzie brakuje 1 decyzji, potem cięższe. Narzędzia: przypadek szczególny, niezmiennik, wypisanie małych przypadków, rysunek. Sprawdź spójność bloków (5.5).</td></tr>
+<tr><td><b>3. Kalkulowane decyzje</b></td><td>75–88 min</td><td>Każde zostałe „?”: jeśli masz przeczucie z $p>0{,}5$ – zaznacz. Reguły z klucza: trzy pewne N ⇒ czwarte T (86%); brak wiedzy ⇒ T (60%). Zostaw puste tylko prawdziwe 50/50 po namyśle.</td></tr>
+<tr><td><b>Kontrola</b></td><td>88–90 min</td><td>Czy karta zgadza się z brudnopisem, czy nie ma przesunięcia wierszy.</td></tr>
+</table>
+<div class="box pulapka"><span class="lbl">Pułapka</span>Najdroższy błąd w tym formacie to nie strzał, tylko <b>pomylony kwantyfikator</b>: „istnieje” (wystarczy przykład) vs „każdy / dla dowolnego” (wystarczy kontrprzykład, by było N). 2024/23: „dla dowolnej liczby $x$” – jedna kontrprzykładowa wartość wystarcza na N.</div>
+
+<h2 id="plan">7. Harmonogram treningowy 06.11–18.11.2026</h2>
+<p class="small">Arkusze z Twojego folderu rozwiązuj na czas (90 min), wynik licz jak w konkursie: $112+$ trafne $-$ błędne. Zapisuj w zeszycie każdą pomyłkę z nazwą schematu (TL1…K4).</p>
+<div class="day"><h4><span class="d">Pt 06.11</span> – diagnoza</h4>Arkusz <b>2025</b> na czas (zad. 19 pomiń – anulowane). Sprawdź kluczem, policz punkty, wypisz schematy, na których straciłeś punkty. Przeczytaj sekcje 1, 4, 5 tej strony.</div>
+<div class="day"><h4><span class="d">So 07.11</span> – reszty i dzielniki</h4>Moduł 1: TL1, TL2 – teoria + wszystkie zadania z kluczem (zakrywaj rozwiązania). Naucz się na pamięć tabeli reszt kwadratów i wzoru na $d(n)$.</div>
+<div class="day"><h4><span class="d">Nd 08.11</span> – pierwsze i diofantyczne</h4>Moduł 1: TL3, TL4. Pell, różnica kwadratów, sumy kwadratów i sześcianów. </div>
+<div class="day"><h4><span class="d">Pn 09.11</span> – algebra</h4>Moduł 1: AL1–AL8 (działania, wartość bezwzględna, przedziały, niewymierne, ciągi). Przećwicz trik $(a+1)(b+1)-1$ do automatyzmu.</div>
+<div class="day"><h4><span class="d">Wt 10.11</span> – arkusz 2024</h4>90 min na czas + analiza. Porównaj wynik z 06.11.</div>
+<div class="day"><h4><span class="d">Śr 11.11</span> – planimetria I (dzień wolny – dłuższa sesja)</h4>Moduł 2: G1, G2, G3 (wielokąty, symetrie, okręgi i łuki). Narysuj samodzielnie każdy przypadek graniczny.</div>
+<div class="day"><h4><span class="d">Cz 12.11</span> – planimetria II</h4>Moduł 2: G4, G5, G6 – zakres trzeciego boku, Varignon, trapez, wektory i iloczyn skalarny. Dwusieczna tylko jako wzór do 2025/21.</div>
+<div class="day"><h4><span class="d">Pt 13.11</span> – stereometria</h4>Moduł 2: S1, S2. Sześcian: przekroje, cięcia przez wierzchołki, środki krawędzi; bipiramidy ($V=n+2$, $K=3n$, $S=2n$).</div>
+<div class="day"><h4><span class="d">So 14.11</span> – arkusz 2023</h4>90 min na czas + analiza. Skup się na zadaniach, które zostawiłeś jako „?”.</div>
+<div class="day"><h4><span class="d">Nd 15.11</span> – kombinatoryka i logika</h4>Moduł 2: K1–K4 – kolorowanie, gry i niezmienniki, permutacje. Kalendarz (rok zwykły/przestępny, pięć takich samych dni w miesiącu).</div>
+<div class="day"><h4><span class="d">Pn 16.11</span> – symulator</h4>Moduł 3, część B (15 zadań = 60 decyzji) w 45 min, potem część A jako powtórka.</div>
+<div class="day"><h4><span class="d">Wt 17.11</span> – arkusze 2022 i 2021</h4>Szybkie przejście: tylko faza 1 (35 min na arkusz). Cel: trening tempa i decyzji „?”.</div>
+<div class="day"><h4><span class="d">Śr 18.11</span> – lekki dzień</h4>Tylko ramki „Pułapka” i „Szybki Trik” ze wszystkich modułów + tabela reszt. Bez nowych zadań, wcześnie spać. Spakuj: długopis, ołówek, gumka, legitymacja.</div>
+
+<footer>Baza przygotowawcza do Alfika Matematycznego, 19.11.2026 · oparta na arkuszach i kluczach 2021–2025 (klasy 2–4 LO). Treści zadań © Łowcy Talentów – Jersz, cytowane w celach treningowych.</footer>
+</main>
+</body>
+</html>
