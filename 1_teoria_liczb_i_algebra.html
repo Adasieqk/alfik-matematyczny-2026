@@ -65,6 +65,32 @@ details[open]>summary{margin-bottom:.3rem}
 .k{display:inline-block;font-weight:700}
 .k.T{color:var(--green)}.k.N{color:var(--red)}.k.X{color:var(--muted);font-weight:400}
 .sol{margin:.35rem 0}
+.figs{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin:.9rem 0 .4rem;align-items:flex-end}
+.figs figure{margin:0;max-width:100%;page-break-inside:avoid;break-inside:avoid}
+.figs svg{display:block;max-width:100%;height:auto;overflow:visible}
+.figs figcaption{font-size:.82rem;color:var(--muted);max-width:300px;margin-top:.25rem;line-height:1.35}
+.figs .g{stroke:var(--line);stroke-width:.6}
+.figs .ax{stroke:var(--muted);stroke-width:1}
+.figs .ln{stroke:var(--ink);stroke-width:1.4;fill:none}
+.figs .thin{stroke-width:.8;opacity:.7}
+.figs .dash{stroke-dasharray:4 3}
+.figs .hl{stroke:var(--red);stroke-width:2;fill:none}
+.figs .thick{stroke-width:4}
+.figs .p,.figs .p0,.figs .p2,.figs .p3,.figs .pbad,.figs .sec{stroke-width:1.5;stroke-linejoin:round}
+.figs .p{fill:var(--accent);fill-opacity:.13;stroke:var(--accent)}
+.figs .p0{fill:none;stroke:var(--ink)}
+.figs .p2{fill:var(--green);fill-opacity:.13;stroke:var(--green)}
+.figs .p3{fill:var(--violet);fill-opacity:.13;stroke:var(--violet);stroke-dasharray:5 3}
+.figs .pbad{fill:var(--muted);fill-opacity:.12;stroke:var(--muted);stroke-dasharray:3 3}
+.figs .sec{fill:var(--red);fill-opacity:.18;stroke:var(--red)}
+.figs .cc{fill:none;stroke:var(--accent);stroke-width:1.3}
+.figs .dt{fill:var(--ink)}
+.figs .red{fill:var(--red)}
+.figs .blk{fill:#1c1c1c;stroke:#888;stroke-width:1}
+.figs .wht{fill:#fff;stroke:#1c1c1c;stroke-width:1.6}
+.figs .hollow{fill:var(--bg);stroke:var(--ink);stroke-width:1.5}
+.figs .tx{fill:var(--ink);font-size:12px;font-family:system-ui,sans-serif;font-style:italic}
+
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .small{font-size:.9rem;color:var(--muted)}
 .badge{display:inline-block;background:var(--soft);border-radius:3px;padding:0 .4rem;font-size:.82rem;font-weight:600}
@@ -157,9 +183,9 @@ function toggleAll(open){document.querySelectorAll('details').forEach(function(d
 <h2 id="TL2">TL2 · Dzielniki: $d(n)$, $\sigma(n)$, NWD i NWW</h2>
 <div class="box schemat"><span class="lbl">Schemat Alfika</span><p>Dla $n=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$:</p>
 $$d(n)=(a_1+1)(a_2+1)\cdots(a_k+1),\qquad \sigma(n)=\prod\frac{p_i^{a_i+1}-1}{p_i-1},\qquad \prod_{d\mid n}d=n^{d(n)/2}.$$
-\lt ul\gt \lt li\gt \lt b\gt $d(n)$ nieparzyste ⇔ $n$ jest kwadratem\lt /b\gt  (5 lat z rzędu w jakiejś formie: 2021/26, 2022/4, 2023/4, 2024/10, 2025/10).\lt /li\gt 
-\lt li\gt $d(n)=2$ ⇔ $p$; $d(n)=3$ ⇔ $p^2$ (dwucyfrowe: $25,49$); $d(n)=4$ ⇔ $p^3$ lub $pq$; $d(n)=5$ ⇔ $p^4$ (dwucyfrowe: $16,81$).\lt /li\gt 
-\lt li\gt $\mathrm{NWD}(a,b)\cdot\mathrm{NWW}(a,b)=ab$; zapis $a=dm$, $b=dn$, $\gcd(m,n)=1$, $\mathrm{NWW}=dmn$.</li></ul></div>
+<ul><li><b>$d(n)$ nieparzyste ⇔ $n$ jest kwadratem</b> (5 lat z rzędu w jakiejś formie: 2021/26, 2022/4, 2023/4, 2024/10, 2025/10).</li>
+<li>$d(n)=2$ ⇔ $p$; $d(n)=3$ ⇔ $p^2$ (dwucyfrowe: $25,49$); $d(n)=4$ ⇔ $p^3$ lub $pq$; $d(n)=5$ ⇔ $p^4$ (dwucyfrowe: $16,81$).</li>
+<li>$\mathrm{NWD}(a,b)\cdot\mathrm{NWW}(a,b)=ab$; zapis $a=dm$, $b=dn$, $\gcd(m,n)=1$, $\mathrm{NWW}=dmn$.</li></ul></div>
 <div class="box trik"><span class="lbl">Szybki Trik</span><ul><li>„Iloczyn kilku liczb jest kwadratem” – rozłóż wszystko na czynniki i licz parzystość wykładników (2023/8: iloczyn całej czwórki jest już kwadratem, więc wykreślić można tylko kwadrat).</li><li>„Iloczyn dzielników między $n^2$ a $n^3$” – przepisz na $n^{d/2}$, porównaj wykładniki: $4\lt d\lt 6$.</li><li>„Warunek po wykreśleniu jednego” (2025/12) – pamiętaj o liczbie $1$: jest kwadratem, sześcianem i każdą potęgą.</li></ul></div>
 <h3>Wszystkie zadania TL2 z lat 2021–2025</h3><div class="task" id="t2021-26"><div class="meta">Alfik 2021 · zadanie 26<span class="pill">TL2</span></div>
 <div class="q">Dwucyfrowa liczba $n$ ma dokładnie 2 (dodatnie) dzielniki. Jaka może być liczba dzielników liczby $n^2$?</div><ol class="opts"><li><b>A)</b> 3</li><li><b>B)</b> 4</li><li><b>C)</b> 6</li><li><b>D)</b> więcej niż 6</li></ol>
@@ -246,7 +272,7 @@ $$d(n)=(a_1+1)(a_2+1)\cdots(a_k+1),\qquad \sigma(n)=\prod\frac{p_i^{a_i+1}-1}{p_
 <div class="q">Połowa kwadratu liczby naturalnej może równocześnie być:</div><ol class="opts"><li><b>A)</b> kwadratem liczby naturalnej</li><li><b>B)</b> podwojonym kwadratem liczby naturalnej</li><li><b>C)</b> sześcianem liczby naturalnej</li><li><b>D)</b> potrojonym kwadratem liczby naturalnej</li></ol>
 <details><summary>Klucz i rozwiązanie</summary><div class="keyline"><span class="k X">ZADANIE ANULOWANE przez organizatora</span></div><div class="sol"><b>Zadanie anulowane przez organizatora</b> (błąd w treści). Dla porządku: $\frac{n^2}2$ jest kwadratem tylko dla $n=0$, podwojonym kwadratem dla $n=2m$ ($2m^2$).</div></details></div>
 <h2 id="AL1">AL1 · Własne działania $*$ i $\#$</h2>
-<div class="box schemat"><span class="lbl">Schemat Alfika</span><p>Pojawiło się w <b>każdym</b> roku (2021/16, 2022/9, 2023/3, 2024/23, 2025/9). Od 2023 zawsze to samo działanie:</p>$$a\#b=ab+a+b=(a+1)(b+1)-1.$$\lt p\gt \lt b\gt Robisz:\lt /b\gt  zamieniasz każdy argument na „$+1$”, mnożysz, odejmujesz 1. Porównanie $x\#y=u\#v$ ⇔ $(x+1)(y+1)=(u+1)(v+1)$ – liczysz tylko iloczyny.\lt /p\gt \lt p\gt Własności: przemienne, łączne, element neutralny $0$ ($x\#0=x$), $x\#(-1)=-1$.</p></div>
+<div class="box schemat"><span class="lbl">Schemat Alfika</span><p>Pojawiło się w <b>każdym</b> roku (2021/16, 2022/9, 2023/3, 2024/23, 2025/9). Od 2023 zawsze to samo działanie:</p>$$a\#b=ab+a+b=(a+1)(b+1)-1.$$<p><b>Robisz:</b> zamieniasz każdy argument na „$+1$”, mnożysz, odejmujesz 1. Porównanie $x\#y=u\#v$ ⇔ $(x+1)(y+1)=(u+1)(v+1)$ – liczysz tylko iloczyny.</p><p>Własności: przemienne, łączne, element neutralny $0$ ($x\#0=x$), $x\#(-1)=-1$.</p></div>
 <div class="box pulapka"><span class="lbl">Pułapka</span>Działania typu $a*b=ab+b+1$ (2021) lub $2a+b+1$ (2022) <b>nie są przemienne</b> – nawiasy i kolejność mają znaczenie. Licz od środka nawiasu.</div>
 <h3>Wszystkie zadania AL1 z lat 2021–2025</h3><div class="task" id="t2021-16"><div class="meta">Alfik 2021 · zadanie 16<span class="pill">AL1</span></div>
 <div class="q">Wprowadźmy nowe działanie „$*$” zdefiniowane następująco: $a * b = ab + b + 1$. Które z poniższych równości są prawdziwe?</div><ol class="opts"><li><b>A)</b> $(1*2)*3=19$</li><li><b>B)</b> $3*(1*2)=19$</li><li><b>C)</b> $1*(3*2)=19$</li><li><b>D)</b> $(3*2)*1=19$</li></ol>
@@ -262,8 +288,9 @@ $$d(n)=(a_1+1)(a_2+1)\cdots(a_k+1),\qquad \sigma(n)=\prod\frac{p_i^{a_i+1}-1}{p_
 <h2 id="AL2">AL2 · Wartość bezwzględna z parametrem</h2>
 <div class="box schemat"><span class="lbl">Schemat Alfika</span><p><b>Interpretacja odległościowa:</b> $|x-a|$ = odległość $x$ od $a$ na osi.</p>
 $$|x-a|+|x-b|\ \ge\ |a-b|,\ \text{równość na całym odcinku }[a,b].$$
-\lt p\gt Stąd dla $|x-a|+|x-b|=p$: brak rozwiązań dla $p<|a-b|$, \lt b\gt nieskończenie wiele\lt /b\gt  dla $p=|a-b|$, dokładnie 2 dla $p>|a-b|$. Wystąpiło 3 razy (2022/26, 2023/19, 2024/28).\lt /p\gt 
-\lt p\gt $|x-p|=c$ ($c>0$) ⇒ $x=p\pm c$. Nierówność $|f(x)|\le1$ ⇔ $-1\le f(x)\le1$ – rozwiąż obie części osobno (2025/2).</p></div>
+<p>Stąd dla $|x-a|+|x-b|=p$: brak rozwiązań dla $p\lt |a-b|$, <b>nieskończenie wiele</b> dla $p=|a-b|$, dokładnie 2 dla $p\gt |a-b|$. Wystąpiło 3 razy (2022/26, 2023/19, 2024/28).</p>
+<p>$|x-p|=c$ ($c\gt 0$) ⇒ $x=p\pm c$. Nierówność $|f(x)|\le1$ ⇔ $-1\le f(x)\le1$ – rozwiąż obie części osobno (2025/2).</p></div>
+<div class="figs"><figure><svg viewBox="0 0 356.0 136.0" width="356.0" role="img"><line class="ax" x1="18.0" y1="66.0" x2="338.0" y2="66.0"/><line class="ax" x1="38.0" y1="69.2" x2="38.0" y2="62.8"/><text class="tx" x="38.0" y="82.0" text-anchor="middle">-1</text><line class="ax" x1="78.0" y1="69.2" x2="78.0" y2="62.8"/><text class="tx" x="78.0" y="82.0" text-anchor="middle">0</text><line class="ax" x1="118.0" y1="69.2" x2="118.0" y2="62.8"/><text class="tx" x="118.0" y="82.0" text-anchor="middle">1</text><line class="ax" x1="158.0" y1="69.2" x2="158.0" y2="62.8"/><text class="tx" x="158.0" y="82.0" text-anchor="middle">2</text><line class="ax" x1="198.0" y1="69.2" x2="198.0" y2="62.8"/><text class="tx" x="198.0" y="82.0" text-anchor="middle">3</text><line class="ax" x1="238.0" y1="69.2" x2="238.0" y2="62.8"/><text class="tx" x="238.0" y="82.0" text-anchor="middle">4</text><line class="ax" x1="278.0" y1="69.2" x2="278.0" y2="62.8"/><text class="tx" x="278.0" y="82.0" text-anchor="middle">5</text><line class="ax" x1="318.0" y1="69.2" x2="318.0" y2="62.8"/><text class="tx" x="318.0" y="82.0" text-anchor="middle">6</text><line class="hl thick" x1="118.0" y1="66.0" x2="238.0" y2="66.0"/><circle class="dt red" cx="118.0" cy="66.0" r="3.2"/><circle class="dt red" cx="238.0" cy="66.0" r="3.2"/><text class="tx" x="118.0" y="56.0" text-anchor="middle">a</text><text class="tx" x="238.0" y="56.0" text-anchor="middle">b</text><circle class="dt" cx="298.0" cy="66.0" r="3.2"/><text class="tx" x="298.0" y="56.0" text-anchor="middle">x</text><polyline class="ln thin" points="118.0 88.0 298.0 88.0"/><text class="tx" x="208.0" y="101.0" text-anchor="middle">|x−a|</text><polyline class="ln thin" points="238.0 44.0 298.0 44.0"/><text class="tx" x="268.0" y="39.0" text-anchor="middle">|x−b|</text></svg><figcaption>Na całym czerwonym odcinku [a, b] suma odległości jest stała i równa b − a; poza nim rośnie po 2 na każdą jednostkę.</figcaption></figure></div>
 <div class="box trik"><span class="lbl">Szybki Trik</span>Zagnieżdżone moduły (2024/14 $|1+x+|x||=1$): rozbij na $x\ge0$ i $x\lt 0$ – wewnętrzny moduł znika od razu. Dla $x\lt 0$ wyrażenie $x+|x|=0$.</div>
 <div class="box pulapka"><span class="lbl">Pułapka</span>„Więcej niż dwa rozwiązania” w równaniu z modułami oznacza zwykle przedział rozwiązań (nieskończenie wiele), a nie „trzy”.</div>
 <h3>Wszystkie zadania AL2 z lat 2021–2025</h3><div class="task" id="t2022-26"><div class="meta">Alfik 2022 · zadanie 26<span class="pill">AL2</span></div>
