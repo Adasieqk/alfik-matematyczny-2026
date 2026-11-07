@@ -12,16 +12,17 @@ Materiały do konkursu **Alfik Matematyczny** (Łowcy Talentów – Jersz), kate
 | [`1_teoria_liczb_i_algebra.html`](1_teoria_liczb_i_algebra.html) | Schematy i wszystkie zadania z teorii liczb, algebry i ciągów |
 | [`2_geometria_i_kombinatoryka.html`](2_geometria_i_kombinatoryka.html) | Schematy i wszystkie zadania z geometrii, stereometrii, kombinatoryki i logiki |
 | [`3_symulator_2026_i_zadania.html`](3_symulator_2026_i_zadania.html) | Symulator: 30 zadań z arkuszy, rozwiązania rozwijane po kliknięciu, karta wyników |
+| [`4_arkusze_i_klucze.html`](4_arkusze_i_klucze.html) | Oryginalne arkusze i klucze 2021–2025: otwórz w nowej karcie lub pobierz, klucz w skrócie (T/N) |
 
 Wszystkie zadania pochodzą z oryginalnych arkuszy 2021–2025, a klucze z oficjalnych kluczy. Format arkusza 234-LIC: 28 zadań, w każdym 4 stwierdzenia A–D oceniane osobno jako prawda/fałsz, start 112 pkt, +1 / −1 / 0, 90 minut, bez kalkulatora.
 
 ## Arkusze i klucze (źródło)
 
-Oryginalne arkusze kategorii klasy 2–4 LO i oficjalne klucze, na których oparta jest cała analiza:
+Oryginalne arkusze kategorii klasy 2–4 LO i oficjalne klucze, na których oparta jest cała analiza. Na stronie `4_arkusze_i_klucze.html` otwierasz je w nowej karcie albo pobierasz jednym kliknięciem. Klucz 2021 jest też jako PDF (oryginał to `.xls`).
 
 | Rok | Arkusz | Klucz |
 |---|---|---|
-| 2021 | [arkusz-2021.pdf](arkusze/2021/arkusz-2021.pdf) | [klucz-2021.xls](arkusze/2021/klucz-2021.xls) |
+| 2021 | [arkusz-2021.pdf](arkusze/2021/arkusz-2021.pdf) | [klucz-2021.pdf](arkusze/2021/klucz-2021.pdf), [klucz-2021.xls](arkusze/2021/klucz-2021.xls) |
 | 2022 | [arkusz-2022.pdf](arkusze/2022/arkusz-2022.pdf) | [klucz-2022.pdf](arkusze/2022/klucz-2022.pdf) |
 | 2023 | [arkusz-2023.pdf](arkusze/2023/arkusz-2023.pdf) | [klucz-2023.pdf](arkusze/2023/klucz-2023.pdf) |
 | 2024 | [arkusz-2024.pdf](arkusze/2024/arkusz-2024.pdf) | [klucz-2024.pdf](arkusze/2024/klucz-2024.pdf) |

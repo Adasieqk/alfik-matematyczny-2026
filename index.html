@@ -17,6 +17,7 @@
 --violet:#bfa6ea;--violet-bg:#241f2e;--amber:#d9c27a;--amber-bg:#26231a;--soft:#26262b}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+[id]{scroll-margin-top:5.5rem}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16.5px}
 nav.top{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.1rem 1.1rem;align-items:center;padding:.55rem 1.1rem}
 nav.top .brand{font-weight:700;margin-right:.6rem;color:var(--ink)}
@@ -65,6 +66,16 @@ details[open]>summary{margin-bottom:.3rem}
 .k{display:inline-block;font-weight:700}
 .k.T{color:var(--green)}.k.N{color:var(--red)}.k.X{color:var(--muted);font-weight:400}
 .sol{margin:.35rem 0}
+table.files td{vertical-align:top;padding:.7rem .55rem}
+.dlrow{display:flex;flex-wrap:wrap;gap:.35rem .6rem;align-items:center;margin:.15rem 0}
+a.dl{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:.28rem .7rem;text-decoration:none;color:var(--ink);font-size:.9rem;white-space:nowrap}
+a.dl:hover{border-color:var(--ink)}
+a.dl.open{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+ol.keygrid{list-style:none;padding:0;margin:.6rem 0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(8.3rem,1fr));gap:.3rem .8rem;font-family:ui-monospace,Consolas,monospace;font-size:.88rem}
+ol.keygrid li{display:flex;gap:.55rem;align-items:baseline;border-bottom:1px solid var(--line);padding:.15rem 0}
+ol.keygrid li b{width:1.5rem;text-align:right;color:var(--muted);font-weight:600}
+@media (max-width:700px){a.dl{white-space:normal}}
+
 .idea{margin:.5rem 0 .3rem}
 ol.steps{margin:.3rem 0 .6rem;padding-left:1.4rem}
 ol.steps li{margin:.3rem 0;padding-left:.2rem}
@@ -131,7 +142,7 @@ function toggleAll(open){document.querySelectorAll('details').forEach(function(d
 </script>
 </head>
 <body>
-<nav class="top"><span class="brand">ALFIK 2026 · 234-LIC</span><a href="index.html" class="active">Centrum dowodzenia</a><a href="1_teoria_liczb_i_algebra.html" class="">1. Teoria liczb i algebra</a><a href="2_geometria_i_kombinatoryka.html" class="">2. Geometria i kombinatoryka</a><a href="3_symulator_2026_i_zadania.html" class="">3. Symulator 2026</a><span class="sp"></span>
+<nav class="top"><span class="brand">ALFIK 2026 · 234-LIC</span><a href="index.html" class="active">Centrum dowodzenia</a><a href="1_teoria_liczb_i_algebra.html" class="">1. Teoria liczb i algebra</a><a href="2_geometria_i_kombinatoryka.html" class="">2. Geometria i kombinatoryka</a><a href="3_symulator_2026_i_zadania.html" class="">3. Symulator 2026</a><a href="4_arkusze_i_klucze.html" class="">4. Arkusze i klucze</a><span class="sp"></span>
 <button class="printbtn no-print" onclick="toggleAll(false)">Zwiń wszystko</button>
 <button class="printbtn main no-print" onclick="expandAndPrint()">Rozwiń wszystko i zapisz jako PDF / Drukuj</button></nav>
 <main>
@@ -143,11 +154,12 @@ function toggleAll(open){document.querySelectorAll('details').forEach(function(d
 </header>
 
 <div class="toc"><b>Moduły:</b>
-<ol>
+<ol start="0">
 <li><a href="index.html">Centrum dowodzenia</a> – format, analiza 2021–2025, haki testowe, strategia 90 min, plan 13-dniowy (ta strona)</li>
 <li><a href="1_teoria_liczb_i_algebra.html">Teoria liczb, algebra i ciągi</a> – schematy + wszystkie zadania TL/AL z lat 2021–2025 z kluczem</li>
 <li><a href="2_geometria_i_kombinatoryka.html">Planimetria, stereometria, kombinatoryka, logika</a> – schematy + wszystkie zadania G/S/K z kluczem</li>
 <li><a href="3_symulator_2026_i_zadania.html">Symulator 2026</a> – 30 zadań z arkuszy 2021–2025 (15 najtrudniejszych + 15 kolejnych) w trybie egzaminacyjnym</li>
+<li><a href="4_arkusze_i_klucze.html">Arkusze i klucze</a> – oryginalne PDF-y 2021–2025: otwórz w nowej karcie lub pobierz</li>
 </ol>
 <b>Na tej stronie:</b> <a href="#format">1. Format</a> · <a href="#anatomia">2. Anatomia arkusza</a> · <a href="#motywy">3. Motywy powtarzalne</a> · <a href="#klucz">4. Statystyka klucza</a> · <a href="#haki">5. Haki testowe</a> · <a href="#strategia">6. Strategia 90 min</a> · <a href="#plan">7. Plan 13 dni</a>
 </div>
@@ -220,19 +232,19 @@ function toggleAll(open){document.querySelectorAll('details').forEach(function(d
 
 <h2 id="plan">7. Harmonogram treningowy 06.11–18.11.2026</h2>
 <p class="small">Arkusze z Twojego folderu rozwiązuj na czas (90 min), wynik licz jak w konkursie: $112+$ trafne $-$ błędne. Zapisuj w zeszycie każdą pomyłkę z nazwą schematu (TL1…K4).</p>
-<div class="day"><h4><span class="d">Pt 06.11</span> – diagnoza</h4>Arkusz <b>2025</b> na czas (zad. 19 pomiń – anulowane). Sprawdź kluczem, policz punkty, wypisz schematy, na których straciłeś punkty. Przeczytaj sekcje 1, 4, 5 tej strony.</div>
-<div class="day"><h4><span class="d">So 07.11</span> – reszty i dzielniki</h4>Moduł 1: TL1, TL2 – teoria + wszystkie zadania z kluczem (zakrywaj rozwiązania). Naucz się na pamięć tabeli reszt kwadratów i wzoru na $d(n)$.</div>
-<div class="day"><h4><span class="d">Nd 08.11</span> – pierwsze i diofantyczne</h4>Moduł 1: TL3, TL4. Pell, różnica kwadratów, sumy kwadratów i sześcianów. </div>
-<div class="day"><h4><span class="d">Pn 09.11</span> – algebra</h4>Moduł 1: AL1–AL8 (działania, wartość bezwzględna, przedziały, niewymierne, ciągi). Przećwicz trik $(a+1)(b+1)-1$ do automatyzmu.</div>
-<div class="day"><h4><span class="d">Wt 10.11</span> – arkusz 2024</h4>90 min na czas + analiza. Porównaj wynik z 06.11.</div>
-<div class="day"><h4><span class="d">Śr 11.11</span> – planimetria I (dzień wolny – dłuższa sesja)</h4>Moduł 2: G1, G2, G3 (wielokąty, symetrie, okręgi i łuki). Narysuj samodzielnie każdy przypadek graniczny.</div>
-<div class="day"><h4><span class="d">Cz 12.11</span> – planimetria II</h4>Moduł 2: G4, G5, G6 – zakres trzeciego boku, Varignon, trapez, wektory i iloczyn skalarny. Dwusieczna tylko jako wzór do 2025/21.</div>
-<div class="day"><h4><span class="d">Pt 13.11</span> – stereometria</h4>Moduł 2: S1, S2. Sześcian: przekroje, cięcia przez wierzchołki, środki krawędzi; bipiramidy ($V=n+2$, $K=3n$, $S=2n$).</div>
-<div class="day"><h4><span class="d">So 14.11</span> – arkusz 2023</h4>90 min na czas + analiza. Skup się na zadaniach, które zostawiłeś jako „?”.</div>
-<div class="day"><h4><span class="d">Nd 15.11</span> – kombinatoryka i logika</h4>Moduł 2: K1–K4 – kolorowanie, gry i niezmienniki, permutacje. Kalendarz (rok zwykły/przestępny, pięć takich samych dni w miesiącu).</div>
-<div class="day"><h4><span class="d">Pn 16.11</span> – symulator</h4>Moduł 3, część B (15 zadań = 60 decyzji) w 45 min, potem część A jako powtórka.</div>
-<div class="day"><h4><span class="d">Wt 17.11</span> – arkusze 2022 i 2021</h4>Szybkie przejście: tylko faza 1 (35 min na arkusz). Cel: trening tempa i decyzji „?”.</div>
-<div class="day"><h4><span class="d">Śr 18.11</span> – lekki dzień</h4>Tylko ramki „Pułapka” i „Szybki Trik” ze wszystkich modułów + tabela reszt. Bez nowych zadań, wcześnie spać. Spakuj: długopis, ołówek, gumka, legitymacja.</div>
+<div class="day"><h4><span class="d">Pt 06.11</span> – diagnoza</h4><a href="4_arkusze_i_klucze.html#y2025">Arkusz 2025 na czas</a> (<a href="arkusze/2025/arkusz-2025.pdf" target="_blank" rel="noopener">otwórz PDF ↗</a>; zad. 19 pomiń – anulowane). Sprawdź <a href="arkusze/2025/klucz-2025.pdf" target="_blank" rel="noopener">kluczem ↗</a>, policz punkty, wypisz schematy, na których straciłeś punkty. Przeczytaj sekcje <a href="#format">1</a>, <a href="#klucz">4</a>, <a href="#haki">5</a> tej strony.</div>
+<div class="day"><h4><span class="d">So 07.11</span> – reszty i dzielniki</h4>Moduł 1: <a href="1_teoria_liczb_i_algebra.html#TL1">TL1</a>, <a href="1_teoria_liczb_i_algebra.html#TL2">TL2</a> – teoria + wszystkie zadania z kluczem (zakrywaj rozwiązania). Naucz się na pamięć tabeli reszt kwadratów i wzoru na $d(n)$.</div>
+<div class="day"><h4><span class="d">Nd 08.11</span> – pierwsze i diofantyczne</h4>Moduł 1: <a href="1_teoria_liczb_i_algebra.html#TL3">TL3</a>, <a href="1_teoria_liczb_i_algebra.html#TL4">TL4</a>. Pell, różnica kwadratów, sumy kwadratów i sześcianów.</div>
+<div class="day"><h4><span class="d">Pn 09.11</span> – algebra</h4>Moduł 1: <a href="1_teoria_liczb_i_algebra.html#AL1">AL1</a>, <a href="1_teoria_liczb_i_algebra.html#AL2">AL2</a>, <a href="1_teoria_liczb_i_algebra.html#AL3">AL3</a>, <a href="1_teoria_liczb_i_algebra.html#AL4">AL4</a>, <a href="1_teoria_liczb_i_algebra.html#AL5">AL5</a>, <a href="1_teoria_liczb_i_algebra.html#AL6">AL6</a>, <a href="1_teoria_liczb_i_algebra.html#AL7">AL7</a>, <a href="1_teoria_liczb_i_algebra.html#AL8">AL8</a> (działania, wartość bezwzględna, przedziały, niewymierne, ciągi). Przećwicz trik $(a+1)(b+1)-1$ do automatyzmu.</div>
+<div class="day"><h4><span class="d">Wt 10.11</span> – arkusz 2024</h4><a href="4_arkusze_i_klucze.html#y2024">Arkusz 2024</a> – 90 min na czas (<a target="_blank" rel="noopener" href="arkusze/2024/arkusz-2024.pdf">otwórz PDF ↗</a>) + analiza. Porównaj wynik z 06.11.</div>
+<div class="day"><h4><span class="d">Śr 11.11</span> – planimetria I (dzień wolny – dłuższa sesja)</h4>Moduł 2: <a href="2_geometria_i_kombinatoryka.html#G1">G1</a>, <a href="2_geometria_i_kombinatoryka.html#G2">G2</a>, <a href="2_geometria_i_kombinatoryka.html#G3">G3</a> (wielokąty, symetrie, okręgi i łuki). Narysuj samodzielnie każdy przypadek graniczny.</div>
+<div class="day"><h4><span class="d">Cz 12.11</span> – planimetria II</h4>Moduł 2: <a href="2_geometria_i_kombinatoryka.html#G4">G4</a>, <a href="2_geometria_i_kombinatoryka.html#G5">G5</a>, <a href="2_geometria_i_kombinatoryka.html#G6">G6</a> – zakres trzeciego boku, Varignon, trapez, wektory i iloczyn skalarny. Dwusieczna tylko jako wzór do 2025/21.</div>
+<div class="day"><h4><span class="d">Pt 13.11</span> – stereometria</h4>Moduł 2: <a href="2_geometria_i_kombinatoryka.html#S1">S1</a>, <a href="2_geometria_i_kombinatoryka.html#S2">S2</a>. Sześcian: przekroje, cięcia przez wierzchołki, środki krawędzi; bipiramidy ($V=n+2$, $K=3n$, $S=2n$).</div>
+<div class="day"><h4><span class="d">So 14.11</span> – arkusz 2023</h4><a href="4_arkusze_i_klucze.html#y2023">Arkusz 2023</a> – 90 min na czas (<a target="_blank" rel="noopener" href="arkusze/2023/arkusz-2023.pdf">otwórz PDF ↗</a>) + analiza. Skup się na zadaniach, które zostawiłeś jako „?”.</div>
+<div class="day"><h4><span class="d">Nd 15.11</span> – kombinatoryka i logika</h4>Moduł 2: <a href="2_geometria_i_kombinatoryka.html#K1">K1</a>, <a href="2_geometria_i_kombinatoryka.html#K2">K2</a>, <a href="2_geometria_i_kombinatoryka.html#K3">K3</a>, <a href="2_geometria_i_kombinatoryka.html#K4">K4</a> – kolorowanie, gry i niezmienniki, permutacje. Kalendarz (rok zwykły/przestępny, pięć takich samych dni w miesiącu).</div>
+<div class="day"><h4><span class="d">Pn 16.11</span> – symulator</h4>Moduł 3, <a href="3_symulator_2026_i_zadania.html#B">część B</a> (15 zadań = 60 decyzji) w 45 min, potem <a href="3_symulator_2026_i_zadania.html#A">część A</a> jako powtórka. Wyniki wpisz w <a href="3_symulator_2026_i_zadania.html#karta">kartę wyników</a>.</div>
+<div class="day"><h4><span class="d">Wt 17.11</span> – arkusze 2022 i 2021</h4><a href="4_arkusze_i_klucze.html#y2022">Arkusz 2022</a> i <a href="4_arkusze_i_klucze.html#y2021">arkusz 2021</a>: szybkie przejście, tylko faza 1 (35 min na arkusz). Cel: trening tempa i decyzji „?”.</div>
+<div class="day"><h4><span class="d">Śr 18.11</span> – lekki dzień</h4>Tylko ramki „Pułapka” i „Szybki Trik” ze wszystkich modułów (<a href="1_teoria_liczb_i_algebra.html">moduł 1</a>, <a href="2_geometria_i_kombinatoryka.html">moduł 2</a>) + <a href="1_teoria_liczb_i_algebra.html#TL1">tabela reszt</a>. Bez nowych zadań, wcześnie spać. Spakuj: długopis, ołówek, gumka, legitymacja.</div>
 
 <footer>Baza przygotowawcza do Alfika Matematycznego, 19.11.2026 · oparta na arkuszach i kluczach 2021–2025 (klasy 2–4 LO). Treści zadań © Łowcy Talentów – Jersz, cytowane w celach treningowych.</footer>
 </main>
