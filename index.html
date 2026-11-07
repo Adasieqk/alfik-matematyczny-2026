@@ -65,6 +65,19 @@ details[open]>summary{margin-bottom:.3rem}
 .k{display:inline-block;font-weight:700}
 .k.T{color:var(--green)}.k.N{color:var(--red)}.k.X{color:var(--muted);font-weight:400}
 .sol{margin:.35rem 0}
+.idea{margin:.5rem 0 .3rem}
+ol.steps{margin:.3rem 0 .6rem;padding-left:1.4rem}
+ol.steps li{margin:.3rem 0;padding-left:.2rem}
+ol.steps li::marker{color:var(--muted);font-weight:600}
+.check{margin:.3rem 0 .6rem;padding:.3rem .7rem;background:var(--soft);border-radius:3px}
+ul.verdict{list-style:none;padding:0;margin:.6rem 0 .3rem;border-top:1px solid var(--line)}
+ul.verdict li{display:grid;grid-template-columns:minmax(7rem,auto) 4.6rem 1fr;gap:.2rem .8rem;padding:.35rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+ul.verdict .vm{font-family:ui-monospace,Consolas,monospace;font-size:.82rem;font-weight:700}
+ul.verdict .vT .vm{color:var(--green)}ul.verdict .vN .vm{color:var(--red)}
+ul.verdict .vo{font-weight:600}
+ul.verdict .vr{color:var(--ink)}
+@media (max-width:700px){ul.verdict li{grid-template-columns:auto auto;}ul.verdict .vr{grid-column:1 / -1;color:var(--muted)}}
+
 .figs{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin:.9rem 0 .4rem;align-items:flex-end}
 .figs figure{margin:0;max-width:100%;page-break-inside:avoid;break-inside:avoid}
 .figs svg{display:block;max-width:100%;height:auto;overflow:visible}
