@@ -153,7 +153,7 @@ function toggleAll(open){document.querySelectorAll('details').forEach(function(d
 </header>
 <div class="toc"><b>Spis treści</b><ol>
 <li><a href="#TL1">TL1 · Reszty z dzielenia, ostatnie cyfry, cechy podzielności</a></li>
-<li><a href="#TL2">TL2 · Dzielniki: $d(n)$, $\sigma(n)$, NWD i NWW</a></li>
+<li><a href="#TL2">TL2 · Dzielniki: ile ich jest, ich iloczyn, NWD i NWW</a></li>
 <li><a href="#TL3">TL3 · Liczby pierwsze i cyfry</a></li>
 <li><a href="#TL4">TL4 · Równania w liczbach całkowitych, potęgi, sumy kwadratów i sześcianów</a></li>
 <li><a href="#AL1">AL1 · Własne działania $*$ i $\#$</a></li>
@@ -204,12 +204,28 @@ function toggleAll(open){document.querySelectorAll('details').forEach(function(d
 <details><summary>Klucz i rozwiązanie</summary><div class="keyline"><span class="k T">A: PRAWDA</span><span class="k N">B: FAŁSZ</span><span class="k N">C: FAŁSZ</span><span class="k N">D: FAŁSZ</span><span class="k X">klucz: TNNN</span></div><div class="sol">$(2k+1)^2=4k(k+1)+1\equiv1\pmod8$ – zawsze 1.</div></details></div><div class="task" id="t2025-23"><div class="meta">Alfik 2025 · zadanie 23<span class="pill">TL1</span></div>
 <div class="q">Jaką cyfrę jedności może mieć liczba, którą można przedstawić zarówno w postaci sumy dwóch kolejnych liczb naturalnych, jak i w postaci sumy pięciu kolejnych liczb naturalnych?</div><ol class="opts"><li><b>A)</b> 0</li><li><b>B)</b> 2</li><li><b>C)</b> 3</li><li><b>D)</b> 5</li></ol>
 <details><summary>Klucz i rozwiązanie</summary><div class="keyline"><span class="k N">A: FAŁSZ</span><span class="k N">B: FAŁSZ</span><span class="k N">C: FAŁSZ</span><span class="k T">D: PRAWDA</span><span class="k X">klucz: NNNT</span></div><div class="sol">Suma 2 kolejnych $=2k+1$ (nieparzysta), suma 5 kolejnych $=5k+10$ (wielokrotność 5) ⇒ nieparzysta wielokrotność 5 ⇒ cyfra jedności $5$.</div></details></div>
-<h2 id="TL2">TL2 · Dzielniki: $d(n)$, $\sigma(n)$, NWD i NWW</h2>
-<div class="box schemat"><span class="lbl">Schemat Alfika</span><p>Dla $n=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$:</p>
-$$d(n)=(a_1+1)(a_2+1)\cdots(a_k+1),\qquad \sigma(n)=\prod\frac{p_i^{a_i+1}-1}{p_i-1},\qquad \prod_{d\mid n}d=n^{d(n)/2}.$$
-<ul><li><b>$d(n)$ nieparzyste ⇔ $n$ jest kwadratem</b> (5 lat z rzędu w jakiejś formie: 2021/26, 2022/4, 2023/4, 2024/10, 2025/10).</li>
-<li>$d(n)=2$ ⇔ $p$; $d(n)=3$ ⇔ $p^2$ (dwucyfrowe: $25,49$); $d(n)=4$ ⇔ $p^3$ lub $pq$; $d(n)=5$ ⇔ $p^4$ (dwucyfrowe: $16,81$).</li>
-<li>$\mathrm{NWD}(a,b)\cdot\mathrm{NWW}(a,b)=ab$; zapis $a=dm$, $b=dn$, $\gcd(m,n)=1$, $\mathrm{NWW}=dmn$.</li></ul></div>
+<h2 id="TL2">TL2 · Dzielniki: ile ich jest, ich iloczyn, NWD i NWW</h2>
+<div class="box schemat"><span class="lbl">Schemat Alfika</span><p><b>1. Ile dzielników ma liczba?</b> Rozłóż ją na liczby pierwsze, do każdego wykładnika dodaj 1 i wszystko pomnóż. Liczbę dzielników zapisujemy $d(n)$.</p>
+<p>Dlaczego tak: dzielnik liczby $12=2^2\cdot3$ powstaje przez wybór, ile dwójek weźmiemy ($0$, $1$ albo $2$ – 3 wybory) i ile trójek ($0$ albo $1$ – 2 wybory). Razem $3\cdot2=6$ dzielników.</p>
+<table>
+<thead><tr><th>$n$</th><th>rozkład</th><th>liczenie</th><th>$d(n)$</th><th>dzielniki</th></tr></thead>
+<tbody>
+<tr><td>$12$</td><td>$2^2\cdot3$</td><td>$(2+1)(1+1)$</td><td>$6$</td><td>$1,2,3,4,6,12$</td></tr>
+<tr><td>$36$</td><td>$2^2\cdot3^2$</td><td>$(2+1)(2+1)$</td><td>$9$</td><td>$1,2,3,4,6,9,12,18,36$</td></tr>
+<tr><td>$49$</td><td>$7^2$</td><td>$2+1$</td><td>$3$</td><td>$1,7,49$</td></tr>
+<tr><td>$30$</td><td>$2\cdot3\cdot5$</td><td>$2\cdot2\cdot2$</td><td>$8$</td><td>$1,2,3,5,6,10,15,30$</td></tr>
+</tbody></table>
+<p><b>2. Kiedy $d(n)$ jest nieparzyste?</b> Dzielniki łączą się w pary $k$ i $\frac nk$. Para się „psuje” tylko wtedy, gdy $k=\frac nk$, czyli $k=\sqrt n$. Zatem liczba dzielników jest nieparzysta <b>⇔ $n$ jest kwadratem liczby naturalnej</b> (np. dla $36$: samotny dzielnik to $6$). To pojawia się co roku: 2021/26, 2022/4, 2023/4, 2024/10, 2025/10.</p>
+<p><b>3. Gotowe odpowiedzi do zapamiętania:</b></p>
+<ul>
+<li>$d(n)=2$ ⇔ $n$ jest pierwsza.</li>
+<li>$d(n)=3$ ⇔ $n=p^2$. Dwucyfrowe: $25$ i $49$.</li>
+<li>$d(n)=4$ ⇔ $n=p^3$ albo $n=p\cdot q$ (dwie różne pierwsze).</li>
+<li>$d(n)=5$ ⇔ $n=p^4$. Dwucyfrowe: $16$ i $81$.</li>
+</ul>
+<p><b>4. Iloczyn wszystkich dzielników.</b> Skoro dzielniki łączą się w pary o iloczynie $n$, a par jest $\frac{d(n)}2$, to iloczyn wszystkich dzielników wynosi $n^{d(n)/2}$. Przykład: $n=12$: $(1\cdot12)(2\cdot6)(3\cdot4)=12^3$, a $d(12)/2=3$ ✔. Użyte w 2023/27.</p>
+<p><b>5. NWD i NWW.</b> Zawsze $\mathrm{NWD}(a,b)\cdot\mathrm{NWW}(a,b)=a\cdot b$. Przykład: $a=12$, $b=18$: $\mathrm{NWD}=6$, $\mathrm{NWW}=36$, $6\cdot36=216=12\cdot18$ ✔. Przydatny zapis: $a=dm$, $b=dn$, gdzie $d=\mathrm{NWD}$, a $m,n$ nie mają wspólnych dzielników – wtedy $\mathrm{NWW}=dmn$.</p>
+<p class="small">Wzór na sumę dzielników $\sigma(n)$ nie jest potrzebny: nie wystąpił w żadnym z 140 zadań z lat 2021–2025.</p></div>
 <div class="box trik"><span class="lbl">Szybki Trik</span><ul><li>„Iloczyn kilku liczb jest kwadratem” – rozłóż wszystko na czynniki i licz parzystość wykładników (2023/8: iloczyn całej czwórki jest już kwadratem, więc wykreślić można tylko kwadrat).</li><li>„Iloczyn dzielników między $n^2$ a $n^3$” – przepisz na $n^{d/2}$, porównaj wykładniki: $4\lt d\lt 6$.</li><li>„Warunek po wykreśleniu jednego” (2025/12) – pamiętaj o liczbie $1$: jest kwadratem, sześcianem i każdą potęgą.</li></ul></div>
 <h3>Wszystkie zadania TL2 z lat 2021–2025</h3><div class="task" id="t2021-26"><div class="meta">Alfik 2021 · zadanie 26<span class="pill">TL2</span></div>
 <div class="q">Dwucyfrowa liczba $n$ ma dokładnie 2 (dodatnie) dzielniki. Jaka może być liczba dzielników liczby $n^2$?</div><ol class="opts"><li><b>A)</b> 3</li><li><b>B)</b> 4</li><li><b>C)</b> 6</li><li><b>D)</b> więcej niż 6</li></ol>
