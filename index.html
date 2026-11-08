@@ -55,6 +55,19 @@ td.c,th.c{text-align:center}
 .task .meta{font-size:.82rem;color:var(--muted);margin-bottom:.3rem}
 .task .meta .pill{margin-left:.6rem;font-family:ui-monospace,Consolas,monospace;font-size:.78rem;border:1px solid var(--line);border-radius:3px;padding:0 .35rem}
 .task .q{margin:.2rem 0 .5rem}
+.task .nr{display:inline-block;font-weight:700;font-size:.95rem;color:#fff;background:var(--accent);border-radius:4px;padding:.05rem .5rem;margin-right:.6rem;font-family:ui-monospace,Consolas,monospace}
+details.deep>summary{color:var(--ink);font-weight:600}
+details.deep{border-left:3px solid var(--accent);padding-left:.8rem;margin-top:.6rem}
+.deepintro{margin:.3rem 0 .6rem}
+ol.deeplist{list-style:none;padding:0;margin:.3rem 0}
+ol.deeplist>li{padding:.45rem 0;border-top:1px solid var(--line)}
+ol.deeplist>li:first-child{border-top:0}
+.deeplist .dh{font-weight:600}
+.deeplist .v{display:inline-block;font-family:ui-monospace,Consolas,monospace;font-size:.82rem;font-weight:700;margin-left:.5rem;padding:0 .4rem;border-radius:3px;border:1px solid currentColor}
+.deeplist .v.T{color:var(--green)}.deeplist .v.N{color:var(--red)}
+.deeplist .dt{margin-top:.15rem}
+.deepend{margin:.5rem 0 .2rem;font-size:.95rem}
+@media print{.task .nr{background:none;color:#000;border:1px solid #000}}
 .opts{list-style:none;padding:0;margin:.2rem 0 .4rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.15rem 1.5rem}
 .opts li{padding:.12rem 0}
 .opts li b{color:var(--muted);margin-right:.3rem;font-weight:600}
@@ -117,6 +130,12 @@ ul.verdict .vr{color:var(--ink)}
 
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .small{font-size:.9rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.85rem;padding:.15rem .6rem;border-radius:.9rem;margin:-.2rem 0 .8rem;border:1px solid var(--line)}
+.tag.znasz{color:#1d6b3a;border-color:#1d6b3a}
+.tag.czesc{color:#8a5a00;border-color:#8a5a00}
+.tag.nowe{color:var(--accent);border-color:var(--accent);font-weight:600}
+@media (prefers-color-scheme:dark){.tag.znasz{color:#6fcf8f;border-color:#6fcf8f}.tag.czesc{color:#e0b050;border-color:#e0b050}}
+@media print{.tag{border:1px solid #888;color:#000!important}}
 .badge{display:inline-block;background:var(--soft);border-radius:3px;padding:0 .4rem;font-size:.82rem;font-weight:600}
 .day{border-top:1px solid var(--line);padding:.7rem 0;margin:0;page-break-inside:avoid;break-inside:avoid}
 .day h4{margin:.1rem 0 .3rem}
@@ -161,9 +180,19 @@ function toggleAll(open){document.querySelectorAll('details').forEach(function(d
 <li><a href="3_symulator_2026_i_zadania.html">Symulator 2026</a> – 30 zadań z arkuszy 2021–2025 (15 najtrudniejszych + 15 kolejnych) w trybie egzaminacyjnym</li>
 <li><a href="4_arkusze_i_klucze.html">Arkusze i klucze</a> – oryginalne PDF-y 2021–2025: otwórz w nowej karcie lub pobierz</li>
 </ol>
-<b>Na tej stronie:</b> <a href="#format">1. Format</a> · <a href="#anatomia">2. Anatomia arkusza</a> · <a href="#motywy">3. Motywy powtarzalne</a> · <a href="#klucz">4. Statystyka klucza</a> · <a href="#haki">5. Haki testowe</a> · <a href="#strategia">6. Strategia 90 min</a> · <a href="#plan">7. Plan 13 dni</a>
+<b>Na tej stronie:</b> <a href="#szkola">0. Szkoła a Alfik</a> · <a href="#format">1. Format</a> · <a href="#anatomia">2. Anatomia arkusza</a> · <a href="#motywy">3. Motywy powtarzalne</a> · <a href="#klucz">4. Statystyka klucza</a> · <a href="#haki">5. Haki testowe</a> · <a href="#strategia">6. Strategia 90 min</a> · <a href="#plan">7. Plan 13 dni</a>
 </div>
 
+<h2 id="szkola">0. Twoja książka (Pazdro, technikum, zakres rozszerzony) a ten materiał</h2>
+<div class="box info"><span class="lbl">Jak czytać znaczniki</span><p>Dopasowałem do rozkładu Pazdro dla 5-letniego technikum, zakres rozszerzony. <b>Klasa III / książka „Matematyka 3”:</b> 1. geometria analityczna, 2. wielomiany, 3. dwumian Newtona, 4. ułamki algebraiczne i równania wymierne, 5. ciągi, <b>6. czworokąty</b> (teraz), 7. pole czworokąta, 8. analiza. <b>Klasa IV:</b> trygonometria, geometria analityczna, kombinatoryka, funkcja wykładnicza i logarytmiczna, prawdopodobieństwo, wielościany. <b>Klasa V:</b> bryły obrotowe. Jeśli u Was kolejność była inna, daj znać, a poprawię.</p></div>
+<p>Przy każdej sekcji w modułach 1 i 2 jest znacznik: <span class="tag znasz">znasz</span> temat był w szkole, <span class="tag czesc">częściowo</span> część znasz, część nowa, <span class="tag nowe">nowe</span> w szkole tego nie było lub dopiero będzie – tam opis jest od zera, z przykładami.</p>
+<table><tr><th>Co już było u Was</th><th>Gdzie to w materiale</th></tr>
+<tr><td>Klasa I: liczby rzeczywiste, przedziały, wyrażenia algebraiczne</td><td>TL3, AL3, AL4</td></tr>
+<tr><td>Klasa II: wartość bezwzględna, funkcja kwadratowa, trójkąty, okręgi, trygonometria</td><td>AL2, AL5, G3, G4</td></tr>
+<tr><td>Klasa III, działy 1–5: geometria analityczna, wielomiany, ułamki algebraiczne, ciągi</td><td>G6, AL6</td></tr>
+<tr><td>Dział 6 (teraz): czworokąty</td><td>G5, część G1 i G2</td></tr>
+<tr><td><b>Jeszcze nie było:</b> kombinatoryka, wielościany, bryły obrotowe</td><td>K4, S2, S1 – opisane od zera</td></tr>
+<tr><td><b>Nigdy nie było, a w Alfiku jest:</b> reszty z dzielenia, dzielniki, równania w liczbach całkowitych, parzystość, kolorowanie, gry, kalendarz</td><td>TL1, TL2, TL4, AL8, K1–K3 – tu poświęć najwięcej czasu</td></tr></table>
 <h2 id="format">1. Prawdziwy format arkusza 234-LIC (sprawdzony na 5 rocznikach)</h2>
 <div class="box info"><span class="lbl">Najważniejsze odkrycie analizy</span><p>W klasach 2–4 szkoły ponadpodstawowej Alfik <b>nie jest</b> testem „30 zadań, jedna z A–E”. Każdy z 5 arkuszy 2021–2025 wygląda tak samo:</p><ul><li><b>28 zadań</b>, w każdym 4 odpowiedzi A, B, C, D;</li><li><b>każdą</b> odpowiedź oceniasz osobno: prawdziwa / fałszywa (może być 0–4 prawdziwych);</li><li><b>112 decyzji</b>, startujesz ze <b>112 pkt</b>; trafna decyzja $+1$, błędna $-1$, brak decyzji $0$ (zachowujesz punkt); maksimum $224$;</li><li>90 minut, bez kalkulatora. Klucz ma postać ciągów typu <code>TNTT</code>.</li></ul><p>Format „30 zadań A–E, +4/−1” dotyczy szkół podstawowych – nie Twojej kategorii.</p></div>
 <div class="box schemat"><span class="lbl">Schemat Alfika</span><p><b>Rachunek strzału w tym formacie:</b> jeśli jesteś pewny stwierdzenia z prawdopodobieństwem $p$, to wartość oczekiwana decyzji to $p\cdot(+1)+(1-p)\cdot(-1)=2p-1$.</p><ul><li>$p\gt 0{{,}}5$ ⇒ zaznaczaj (zysk),</li><li>$p=0{{,}}5$ ⇒ obojętne,</li><li>$p\lt 0{{,}}5$ ⇒ zaznacz <i>przeciwną</i> odpowiedź.</li></ul><p>Pusta odpowiedź ma sens tylko przy prawdziwym 50/50.</p></div>
