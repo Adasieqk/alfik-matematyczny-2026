@@ -126,6 +126,31 @@ ul.verdict .vr{color:var(--ink)}
 .figs .blk{fill:#1c1c1c;stroke:#888;stroke-width:1}
 .figs .wht{fill:#fff;stroke:#1c1c1c;stroke-width:1.6}
 .figs .hollow{fill:var(--bg);stroke:var(--ink);stroke-width:1.5}
+.figs .tri{fill:var(--accent);fill-opacity:.10;stroke:none}
+.figs .tri2{fill:var(--green);fill-opacity:.13;stroke:none}
+.figs .arc{fill:var(--accent);fill-opacity:.28;stroke:var(--accent);stroke-width:1}
+.figs .arc2{fill:var(--green);fill-opacity:.32;stroke:var(--green);stroke-width:1}
+.figs .arc3{fill:var(--amber);fill-opacity:.3;stroke:var(--amber);stroke-width:1}
+.figs .red2{stroke:var(--red);opacity:.55}
+.figs .thin2{stroke-width:1.1;opacity:.75}
+.figs .thick2{stroke-width:3}
+.figs .ln2{stroke:var(--green);fill:none}.figs .ln3{stroke:var(--amber);fill:none}
+.figs .blue{fill:var(--accent)}.figs .green{fill:var(--green)}
+.figs .txb{fill:var(--ink);font-size:12.5px;font-weight:700;font-family:system-ui,sans-serif}
+.figs .curve{stroke:var(--accent);stroke-width:2.4;fill:none}
+.figs .cell{fill:var(--card);stroke:var(--ink);stroke-width:1}
+.figs .cell2{fill:var(--accent);fill-opacity:.1;stroke:var(--ink);stroke-width:1}
+.figs .cellA{fill:var(--accent);fill-opacity:.18}.figs .cellB{fill:var(--green);fill-opacity:.2}.figs .cellB2{fill:var(--green);fill-opacity:.2}.figs .cellC{fill:var(--red);fill-opacity:.25}
+.figs .g2{stroke:var(--ink);stroke-width:.8;opacity:.6}
+.figs .machine{fill:var(--accent);fill-opacity:.1;stroke:var(--accent);stroke-width:1.5;rx:8}
+.figs .cellP{fill:var(--accent);fill-opacity:.28;stroke:var(--ink);stroke-width:1}
+.figs .cc2{fill:none;stroke:var(--green);stroke-width:1.5}
+.figs .curve2{stroke:var(--green);stroke-width:2.2;fill:none}.figs .curve3{stroke:var(--amber);stroke-width:2.2;fill:none}
+.figs .thinp{stroke-width:.8}
+.viz{border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem .2rem;margin:.7rem 0;background:var(--card)}
+.viz .vizt{font-weight:700;font-size:.9rem}
+.viz .figs{margin-top:.3rem}
+.viz figcaption{max-width:330px}
 .figs .tx{fill:var(--ink);font-size:12px;font-family:system-ui,sans-serif;font-style:italic}
 
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
@@ -161,7 +186,7 @@ function toggleAll(open){document.querySelectorAll('details').forEach(function(d
 </script>
 </head>
 <body>
-<nav class="top"><span class="brand">ALFIK 2026 · 234-LIC</span><a href="index.html" class="active">Centrum dowodzenia</a><a href="wszystko.html" class="">1. WSZYSTKO na 1 stronie</a><a href="1_teoria_liczb_i_algebra.html" class="">2. Teoria liczb i algebra</a><a href="2_geometria_i_kombinatoryka.html" class="">3. Geometria i kombinatoryka</a><a href="3_symulator_2026_i_zadania.html" class="">4. Symulator 2026</a><a href="4_arkusze_i_klucze.html" class="">5. Arkusze i klucze</a><span class="sp"></span>
+<nav class="top"><span class="brand">ALFIK 2026 · 234-LIC</span><a href="index.html" class="active">Centrum dowodzenia</a><a href="wszystko.html" class="">1. WSZYSTKO na 1 stronie</a><a href="teoria.html" class="">2. Sama teoria (druk)</a><a href="1_teoria_liczb_i_algebra.html" class="">3. Teoria liczb i algebra</a><a href="2_geometria_i_kombinatoryka.html" class="">4. Geometria i kombinatoryka</a><a href="3_symulator_2026_i_zadania.html" class="">5. Symulator 2026</a><a href="4_arkusze_i_klucze.html" class="">6. Arkusze i klucze</a><span class="sp"></span>
 <button class="printbtn no-print" onclick="toggleAll(false)">Zwiń wszystko</button>
 <button class="printbtn main no-print" onclick="expandAndPrint()">Rozwiń wszystko i zapisz jako PDF / Drukuj</button></nav>
 <main>
